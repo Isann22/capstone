@@ -89,7 +89,7 @@ const loginUser = async (req, res) => {
       token,
     });
   } catch (err) {
-    res.status(500).json({ message: "something wnt wrong" });
+    res.status(500).json({ message: "something went wrong" });
   }
 };
 

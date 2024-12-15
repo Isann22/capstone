@@ -1,5 +1,9 @@
-const router = require("express").Router;
+const { verifyToken } = require("../middleware/authMiddleware");
 
-router.get("/data", (req, res) => {
-  res.json("data");
+const router = require("express").Router();
+
+router.get("/admin", verifyToken, (req, res) => {
+  res.send("admin");
 });
+
+module.exports = router;
