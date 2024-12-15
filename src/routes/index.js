@@ -1,11 +1,7 @@
-const userRoute = require("./userRoute");
+const authRoute = require("./authRoutes");
 
 const routes = require("express").Router();
 
-routes.use("/user", userRoute);
-
-routes.get("/", (req, res) => {
-  res.send("ini rute");
-});
+routes.use("/auth", authRoute);
 
 module.exports = routes;
