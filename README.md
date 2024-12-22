@@ -10,14 +10,16 @@ Clone repositori ini:
 git clone https://github.com/Isann22/capstone
 cd capstone
 ```
-Instal dependensi:
-```sh
-npm install
-```
 Buat file .env dari .env.example dan isi dengan konfigurasi yang sesuai:
 ```sh
 cp .env.example .env
 ```
+
+Instal dependensi:
+```sh
+npm install
+```
+
 Jalankan migrasi untuk membuat tabel:
 ```sh
 npx sequelize-cli db:migrate
