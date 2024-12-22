@@ -7,7 +7,7 @@ Proyek ini adalah aplikasi manajemen novel yang memungkinkan admin  untuk menamb
 ## Installation
 Clone repositori ini:
 ```sh
-git clone https://github.com/https://github.com/Isann22/capstone
+git clone https://github.com/Isann22/capstone
 cd capstone
 ```
 Instal dependensi:
