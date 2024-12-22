@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "5249b8c2-aa23-433e-a182-48cc79db212c",
+		"name": "Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39820724"
+	},
+	"item": [
+		{
+			"name": "Register User By Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"user123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Register User Role Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin123\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"user123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book Data (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM0ODMyMDQxLCJleHAiOjE3MzQ4MzU2NDF9.tPwoiDd7IaWnHmzcN838Kif2gDe4OMu5g064nBL8Wuc"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Daun Yang Jatuh Tak Pernah Membenci Angin\",\r\n  \"author\": \"Tere Liye\",\r\n  \"publisher\": \"Gramedia Pustaka\",\r\n  \"year\": \"2014-06-01\",\r\n  \"pageCount\": 264\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/data/admin/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books (Admin | User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/data"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Daun Yang Jatuh Tak Pernah Membenci Angin remake\",\r\n  \"author\": \"Tere Liye\",\r\n  \"publisher\": \"Gramedia Pustaka\",\r\n  \"year\": \"2015-06-01\",\r\n  \"pageCount\": 264\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/data/admin/edit/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/data/admin/delete/1"
+			},
+			"response": []
+		}
+	]
+}
