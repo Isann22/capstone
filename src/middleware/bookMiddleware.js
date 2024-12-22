@@ -16,13 +16,6 @@ const validateBook = (req, res, next) => {
       error: "Title, author, and publisher must be strings",
     });
   }
-
-  if (typeof year !== "number" || year < 0) {
-    return res.status(400).json({
-      error: "Year must be a positive number",
-    });
-  }
-
   if (typeof pageCount !== "number" || pageCount < 0) {
     return res.status(400).json({
       error: "Page count must be a positive number",
